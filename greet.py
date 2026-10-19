@@ -1,15 +1,15 @@
-"""Print a greeting for the name given on the command line."""
+"""Command-line greeting program."""
 
 import sys
 
 
 def greet(name: str) -> str:
-    """Return a greeting for name."""
+    """Return a greeting for the given name."""
     return f"Hello, {name}!"
 
 
 def main(argv: list[str] | None = None) -> None:
-    """Read the first argument (default: world) and print the greeting."""
+    """Print a greeting using the first command-line argument."""
     args = sys.argv[1:] if argv is None else argv
     name = args[0] if args else "world"
     print(greet(name))
